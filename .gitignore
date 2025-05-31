@@ -7,3 +7,8 @@
 log.txt
 log.txt~
 dumped_dex*
+*.dex
+*.odex
+*.vdex
+*.art
+*.apk
