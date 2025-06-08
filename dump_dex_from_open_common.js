@@ -90,6 +90,11 @@ function dumpDexToFile(filename, base, size) {
     var processName = getProcessName();
 
     if (processName != "-1") {
+        // 判断是否以 .dex 结尾
+        if (!filename.endsWith(".dex")) {
+            filename += ".dex";
+        }
+
         const dir = "/sdcard/Android/data/" + processName + "/dump_dex";
         const fullPath = dir + "/" + filename.replace(/\//g, "_").replace(/!/g, "_");
 
